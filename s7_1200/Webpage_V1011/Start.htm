@@ -1,0 +1,117 @@
+<!-- AWP_In_Variable Name='"Start"' -->
+<!-- AWP_In_Variable Name='"Stop"' -->
+<!-- AWP_In_Variable Name='"Emergency"' -->
+<!-- AWP_In_Variable Name='"set_level_tank"' -->
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+	<head>
+		<title>Userdefined Website - Application Start</title>
+		<meta http-equiv="Content-Language" content="en" >
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+		<meta http-equiv="Content-Script-Type" content="text/javascript" >
+		<!-- <meta http-equiv="refresh" content="10; URL=Start.htm"> -->
+		<link rel="stylesheet" type="text/css" href="Stylesheet/siemens_Stylesheet.css"/>
+		<script src="Script/siemens_script.js" type="text/javascript">	</script>
+	</head>
+
+	<body>
+
+<!-- Header Line -->
+		<div id="header">
+			<table border="0" >
+				<tr>
+					<td width="650px"><h2><big>TIA Portal V11 <br> Webserver Applikation</big></h2></td>
+					<td width="300px"><img src="Images/SIEMENS_Logo.PNG"/></td>
+				</tr>
+			</table>
+		</div>
+<!-- Header Line End-->
+<!-- Navigation -->
+		<div id="navi">
+			<ul>
+				<a>Plant status</a><br>
+				<a href="Overview.htm">Overview Tank</a><br>
+			</ul>
+		</div>
+<!-- Navigation End-->
+<!-- Data Area -->
+		<div id="page">
+
+			<h3>Plant status</h3>
+
+			<table width="840px" height="100px" border=0>
+				<tr>
+					<td width="63%" align="center" height="10%">
+						<img style="vertical-align: bottom; margin: 0px; height: 50px; width: 50px; " src="Images\Status0:="StartStop":.png"/> <cr>
+					</td>
+					<td width="37%" align="center" height="10%">
+						<td class="static_field">&nbsp;</td>
+					</td>
+				</tr>
+
+			</table>
+
+			<table width="840px" height="100px" border=0>
+				<tr>
+					<td align="left">
+						<form method="post" action="">
+							<input type="submit" value="Start" style="height: 45px; width: 200px">
+							<input type="hidden" name='"Start"' value="1">
+							<input type="hidden" name='"Stop"' value="0">
+						</form>
+					</td>
+					<td align="center">
+						<form method="post" action="">
+							<input type="submit" value="Stop" style="height: 45px; width: 200px">
+							<input type="hidden" name='"Stop"' value="1"> 
+							<input type="hidden" name='"Start"' value="0">
+							<input type="hidden" name='"Emergency"' value="0">
+						</form>
+					</td>
+					<td align="right">
+						<form method="post" action="">
+							<input type="submit" value="Emergency" style="height: 45px; width: 200px">
+							<input type="hidden" name='"Emergency"' value="1"> 
+						</form>
+					</td>
+				</tr>
+		 		<tr>
+					<td height="55px">
+				</tr>
+			</table>
+
+			
+			<h3>Tank level</h3>
+			<p>Determine the level by a number between 4 and 13!</p>
+
+			<form method="post" action="" onsubmit="return check();">
+			  <input type="text" id="wert1" name='"set_level_tank"' size="2" style="height: 45px; width: 50px; font-size: 21px; text-align: center; padding: 8px;">
+			  <input type="submit" value="Set a new level" style="height: 45px; width: 200px">
+			</form>
+			
+			<p>Actual set level:   :="set_level_tank":</p>
+		<!--
+		 	<h3>Filling Level</h3>
+			<table width="840px" height="100px" border=0>
+				<tr>
+					<td width="210px" align="left" height="25px">
+						<tp><big>Tank Level</big></tp>
+					</td>
+					<td width="210px" align="left" height="25px">
+						<tp><big>:="TankLevelScal": % </big></tp>
+					</td>
+					<td width="420px" align="left" height="30px">
+						<div style=" width: 420px; height:30px; border: solid 1px black; ">
+							<img style="vertical-align: bottom; margin: 1px; height: 28px; width: :="TankLevelScal":%; " src="Images\blue.png"/> 
+						</div>
+					</td>
+				</tr>
+			</table>
+		 -->	
+		</div>
+<!-- Data Area End-->
+	</body> 
+</html>

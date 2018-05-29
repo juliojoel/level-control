@@ -1,0 +1,42 @@
+<!-- AWP_In_Variable Name='"Start"' -->
+<!-- AWP_In_Variable Name='"Stop"' -->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+	<head>
+		<title>Userdefined Website - Application Start Stop</title>
+		<meta http-equiv="Content-Language" content="en" >
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+		<meta http-equiv="Content-Script-Type" content="text/javascript" >
+		<!-- <meta http-equiv="refresh" content="10; URL=Start_Stop_buttons.htm"> -->
+		<link rel="stylesheet" type="text/css" href="Stylesheet/siemens_Stylesheet.css"/>
+		<script src="Script/siemens_script.js" type="text/javascript">	</script>
+	</head>
+
+	<body bgcolor="#D0D3DA">
+
+		<table border="0" >
+			<tr>
+				<td class="static_field_button">
+					<form method="post" action="">
+						<input type="submit" value="Start" style="height: 30px; width: 100px">
+						<input type="hidden" name='"Start"' value="1">
+						<input type="hidden" name='"Stop"' value="0">
+					</form>
+				</td>
+			</tr>
+			<tr>
+				<td class="static_field_button">
+					<form method="post" action="">
+						<input type="submit" value="Stop" style="height: 30px; width: 100px">
+						<input type="hidden" name='"Stop"' value="1"> 
+						<input type="hidden" name='"Start"' value="0">
+					</form>
+				</td>
+			</tr>
+		</table>
+
+	</body>
+
+</html>
